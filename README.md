@@ -1,84 +1,80 @@
 # Incident Management System
 
-## Overview
-A Spring Boot REST API for managing IT incidents with complete CRUD operations, search, filtering, pagination, sorting, and Swagger API documentation.
+A Spring Boot REST API project for managing incidents with complete CRUD operations, filtering, pagination, sorting, and API documentation using Swagger.
 
----
+## Technologies Used
+
+* Java 21
+* Spring Boot 3
+* Spring Data JPA
+* MySQL
+* Swagger OpenAPI
+* Maven
+* Jakarta Validation
 
 ## Features
 
-- Create Incident
-- Get All Incidents
-- Get Incident by ID
-- Update Incident
-- Delete Incident
-- Search Incident by Title
-- Filter by Status
-- Filter by Priority
-- Pagination
-- Sorting
-- Swagger UI Documentation
+* Create Incident
+* Get All Incidents
+* Get Incident by ID
+* Update Incident
+* Delete Incident
+* Search by Title
+* Filter by Priority
+* Filter by Status
+* Pagination
+* Sorting
+* Input Validation
+* Swagger API Documentation
 
----
+## Project Structure
 
-## Tech Stack
-
-- Java 21
-- Spring Boot 3
-- Spring Data JPA
-- MySQL
-- Maven
-- Swagger OpenAPI
-
----
+```
+src
+ ├── controller
+ ├── service
+ ├── repository
+ ├── entity
+ ├── dto
+ ├── mapper
+ └── exception
+```
 
 ## API Endpoints
 
-### CRUD
+| Method | Endpoint                           |
+| ------ | ---------------------------------- |
+| POST   | /api/incidents                     |
+| GET    | /api/incidents                     |
+| GET    | /api/incidents/{id}                |
+| PUT    | /api/incidents/{id}                |
+| DELETE | /api/incidents/{id}                |
+| GET    | /api/incidents/search              |
+| GET    | /api/incidents/priority/{priority} |
+| GET    | /api/incidents/status/{status}     |
+| GET    | /api/incidents/page                |
+| GET    | /api/incidents/sort                |
 
-POST /api/incidents
+## Swagger UI
 
-GET /api/incidents
-
-GET /api/incidents/{id}
-
-PUT /api/incidents/{id}
-
-DELETE /api/incidents/{id}
-
-### Search & Filter
-
-GET /api/incidents/search?title=
-
-GET /api/incidents/status/{status}
-
-GET /api/incidents/priority/{priority}
-
-### Pagination
-
-GET /api/incidents/page?page=0&size=5
-
-### Sorting
-
-GET /api/incidents/sort?field=priority
-
----
+```
+http://localhost:8080/swagger-ui/index.html
+```
 
 ## Database
 
-MySQL
+MySQL Database
 
----
+Database Name:
 
-## Swagger API
+```
+incident_management
+```
 
-http://localhost:8080/swagger-ui/index.html
+## Screenshots
 
----
+Swagger API screenshots are available in the `screenshots` folder.
 
 ## Author
 
-**PEDDABODU SAI SREENIDHI**
-
-GitHub:
-https://github.com/Sreenidhi1608
+Peddabodu Sai Sreenidhi
