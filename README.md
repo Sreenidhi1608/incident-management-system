@@ -1,85 +1,84 @@
 # Incident Management System
 
-A RESTful Incident Management System built using Spring Boot.
+## Overview
+A Spring Boot REST API for managing IT incidents with complete CRUD operations, search, filtering, pagination, sorting, and Swagger API documentation.
+
+---
 
 ## Features
 
 - Create Incident
 - Get All Incidents
-- Get Incident By ID
+- Get Incident by ID
 - Update Incident
 - Delete Incident
-- Search by Title
+- Search Incident by Title
 - Filter by Status
 - Filter by Priority
 - Pagination
 - Sorting
-- Validation
-- Global Exception Handling
-- Swagger API Documentation
-- Unit Testing
-- Repository Testing
+- Swagger UI Documentation
 
-## Technologies Used
+---
+
+## Tech Stack
 
 - Java 21
 - Spring Boot 3
 - Spring Data JPA
 - MySQL
-- H2 Database
 - Maven
-- JUnit 5
-- Mockito
-- Swagger (OpenAPI)
+- Swagger OpenAPI
+
+---
 
 ## API Endpoints
 
-| Method | Endpoint |
-|---------|----------|
-| POST | /api/incidents |
-| GET | /api/incidents |
-| GET | /api/incidents/{id} |
-| PUT | /api/incidents/{id} |
-| DELETE | /api/incidents/{id} |
-| GET | /api/incidents/search |
-| GET | /api/incidents/status/{status} |
-| GET | /api/incidents/priority/{priority} |
-| GET | /api/incidents/page |
-| GET | /api/incidents/sort |
+### CRUD
 
-## Running the Project
+POST /api/incidents
 
-```bash
-mvn clean install
-mvn spring-boot:run
-```
+GET /api/incidents
 
-Server runs at:
+GET /api/incidents/{id}
 
-```
-http://localhost:8080
-```
+PUT /api/incidents/{id}
 
-Swagger UI:
+DELETE /api/incidents/{id}
 
-```
+### Search & Filter
+
+GET /api/incidents/search?title=
+
+GET /api/incidents/status/{status}
+
+GET /api/incidents/priority/{priority}
+
+### Pagination
+
+GET /api/incidents/page?page=0&size=5
+
+### Sorting
+
+GET /api/incidents/sort?field=priority
+
+---
+
+## Database
+
+MySQL
+
+---
+
+## Swagger API
+
 http://localhost:8080/swagger-ui/index.html
-```
 
-## Testing
-
-Run:
-
-```bash
-mvn clean test
-```
-
-Current Test Results
-
-- Total Tests : 26
-- Passed : 26
-- Failed : 0
+---
 
 ## Author
 
-Sai Sreenidhi
+**PEDDABODU SAI SREENIDHI**
+
+GitHub:
+https://github.com/Sreenidhi1608
